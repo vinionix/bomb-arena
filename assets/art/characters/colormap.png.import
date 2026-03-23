@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://colormap.png"
+source_file="res://assets/art/characters/colormap.png"
 dest_files=["res://.godot/imported/colormap.png-c40fa9ebbff2ecfe1f07ba184f56e288.s3tc.ctex"]
 
 [params]

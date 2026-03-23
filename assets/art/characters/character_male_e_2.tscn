@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ci6wyitqbjv8q"]
 
-[ext_resource type="PackedScene" uid="uid://c2hryp2yf47" path="res://character-male-e.glb" id="1_jnhig"]
-[ext_resource type="Texture2D" uid="uid://r28smv85fne8" path="res://colormap.png" id="2_a2hle"]
+[ext_resource type="PackedScene" uid="uid://c2hryp2yf47" path="res://assets/art/characters/character-male-e.glb" id="1_jnhig"]
+[ext_resource type="Texture2D" uid="uid://r28smv85fne8" path="res://assets/art/characters/colormap.png" id="2_a2hle"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6lj1"]
 albedo_texture = ExtResource("2_a2hle")

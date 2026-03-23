@@ -8,7 +8,7 @@ path="res://.godot/imported/aid-mask.glb-cbde9412a9687a68b580dd9d2130377d.scn"
 
 [deps]
 
-source_file="res://aid-mask.glb"
+source_file="res://assets/art/props/aid-mask.glb"
 dest_files=["res://.godot/imported/aid-mask.glb-cbde9412a9687a68b580dd9d2130377d.scn"]
 
 [params]

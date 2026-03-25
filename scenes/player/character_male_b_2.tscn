@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b07alj2foy76"]
+
+[ext_resource type="PackedScene" uid="uid://crqqvi6td81jb" path="res://scenes/player/character-male-b.glb" id="1_wx86j"]
+[ext_resource type="Texture2D" uid="uid://r28smv85fne8" path="res://scenes/player/colormap.png" id="2_q0i7y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aq5yx"]
+albedo_texture = ExtResource("2_q0i7y")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkc5h"]
+albedo_texture = ExtResource("2_q0i7y")
+
+[node name="character-male-b2" unique_id=1935614128 instance=ExtResource("1_wx86j")]
+
+[node name="Skeleton3D" parent="character-male-b" parent_id_path=PackedInt32Array(13750166) index="0" unique_id=1888300605]
+bones/0/position = Vector3(0, 0.0052000005, 0)
+bones/1/rotation = Quaternion(0.22998182, 0, 0, 0.973195)
+bones/2/rotation = Quaternion(-0.22998182, 0, 0, 0.973195)
+bones/3/rotation = Quaternion(0, 0.024292603, 0, 0.99970496)
+bones/4/rotation = Quaternion(0.02602647, -0.06801408, -0.36152837, 0.9295128)
+bones/5/rotation = Quaternion(-0.02602647, -0.06801408, 0.36152837, 0.9295128)
+bones/6/rotation = Quaternion(0, -0.01619595, 0, 0.99986887)
+
+[node name="body-mesh" parent="character-male-b/Skeleton3D" index="0" unique_id=438434183]
+surface_material_override/0 = SubResource("StandardMaterial3D_aq5yx")
+
+[node name="head-mesh" parent="character-male-b/Skeleton3D" index="1" unique_id=671761524]
+surface_material_override/0 = SubResource("StandardMaterial3D_mkc5h")

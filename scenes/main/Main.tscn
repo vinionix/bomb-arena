@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://c7tx6k1p5d785"]
 
 [ext_resource type="Script" uid="uid://og7gdyn30syh" path="res://scenes/main/Main.cs" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/arena/Arena.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bgro3klgmbehc" path="res://scenes/arena/Arena.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/ui/Hud.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/ui/MobileControls.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/ui/PauseMenu.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://scenes/ui/GameOver.tscn" id="6"]
 [ext_resource type="Script" uid="uid://bsoi7rh4qsgdm" path="res://scripts/managers/GameManager.cs" id="7"]
-[ext_resource type="PackedScene" uid="uid://cofp0vfkqpdt7" path="res://scenes/player/Player.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://ci6wyitqbjv8q" path="res://scenes/player/character_male_e_2.tscn" id="8"]
 
 [node name="Main" type="Node" unique_id=76095570]
 script = ExtResource("1")
@@ -15,14 +15,13 @@ script = ExtResource("1")
 [node name="World" type="Node3D" parent="." unique_id=7119883]
 
 [node name="Arena" parent="World" unique_id=1736731486 instance=ExtResource("2")]
-visible = false
 
 [node name="Camera3D" type="Camera3D" parent="World" unique_id=241191495]
 transform = Transform3D(1, 0, 0, 0, 0.93969274, 0.3420199, 0, -0.34201992, 0.93969274, 0.08451845, 5.996443, 11.956041)
-visible = false
 current = true
 
 [node name="Player" parent="World" unique_id=178050783 instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.109805584, 0.4683392, -0.25397038)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1131934363]
 

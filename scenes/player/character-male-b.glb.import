@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://crqqvi6td81jb"
-path="res://.godot/imported/character-male-b.glb-5fabd6f068ea5e7b1ae71679ce850f4d.scn"
+path="res://.godot/imported/character-male-b.glb-ec31ef5f8b24232ba355a09c0f7c1052.scn"
 
 [deps]
 
-source_file="res://assets/art/characters/character-male-b.glb"
-dest_files=["res://.godot/imported/character-male-b.glb-5fabd6f068ea5e7b1ae71679ce850f4d.scn"]
+source_file="res://scenes/player/character-male-b.glb"
+dest_files=["res://.godot/imported/character-male-b.glb-ec31ef5f8b24232ba355a09c0f7c1052.scn"]
 
 [params]
 
@@ -37,6 +37,12 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:character-male-b": {
+"node/script": Resource("uid://dwdxncmy7nof2", "res://scenes/player/Player.cs")
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

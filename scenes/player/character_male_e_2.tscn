@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ci6wyitqbjv8q"]
+
+[ext_resource type="PackedScene" uid="uid://c2hryp2yf47" path="res://scenes/player/character-male-e.glb" id="1_jnhig"]
+[ext_resource type="Texture2D" uid="uid://r28smv85fne8" path="res://scenes/player/colormap.png" id="2_a2hle"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6lj1"]
+albedo_texture = ExtResource("2_a2hle")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gscm6"]
+albedo_texture = ExtResource("2_a2hle")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x8yjt"]
+radius = 0.37023926
+height = 0.7404785
+
+[node name="character-male-e2" unique_id=1650142956 instance=ExtResource("1_jnhig")]
+
+[node name="Skeleton3D" parent="character-male-e" parent_id_path=PackedInt32Array(218815985) index="0" unique_id=1093084933]
+bones/4/rotation = Quaternion(0, 0, -0.3826835, 0.92387956)
+bones/5/rotation = Quaternion(0, 0, 0.3826835, 0.92387956)
+
+[node name="body-mesh" parent="character-male-e/Skeleton3D" index="0" unique_id=557182053]
+surface_material_override/0 = SubResource("StandardMaterial3D_o6lj1")
+
+[node name="head-mesh" parent="character-male-e/Skeleton3D" index="1" unique_id=268936262]
+surface_material_override/0 = SubResource("StandardMaterial3D_gscm6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=645587094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34249878, 0)
+shape = SubResource("CapsuleShape3D_x8yjt")

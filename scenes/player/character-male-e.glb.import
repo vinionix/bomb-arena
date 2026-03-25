@@ -4,18 +4,18 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c2hryp2yf47"
-path="res://.godot/imported/character-male-e.glb-d95ed3d0738422df8ece0453f809f08b.scn"
+path="res://.godot/imported/character-male-e.glb-39d7e01768b649c249ef679b76e158bc.scn"
 
 [deps]
 
-source_file="res://assets/art/characters/character-male-e.glb"
-dest_files=["res://.godot/imported/character-male-e.glb-d95ed3d0738422df8ece0453f809f08b.scn"]
+source_file="res://scenes/player/character-male-e.glb"
+dest_files=["res://.godot/imported/character-male-e.glb-39d7e01768b649c249ef679b76e158bc.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
-nodes/root_script=null
+nodes/root_script=Resource("uid://dwdxncmy7nof2", "res://scenes/player/Player.cs")
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -43,6 +43,11 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "",
 "use_external/path": "uid://r28smv85fne8"
+}
+},
+"nodes": {
+"PATH:character-male-e": {
+"node/script": null
 }
 }
 }

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://vlawlhpcdhyi"]
+
+[ext_resource type="Script" uid="uid://ob2w1mu3enkh" path="res://scenes/bomb/Bomb.cs" id="1"]
+[ext_resource type="PackedScene" uid="uid://svig7iyjpq1f" path="res://scenes/bomb/cartoon_bomb.glb" id="1_yj6gm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yj6gm"]
+radius = 0.10608721
+
+[node name="Bomb" type="RigidBody3D" unique_id=364032844]
+script = ExtResource("1")
+
+[node name="Sketchfab_Scene" parent="." unique_id=959044036 instance=ExtResource("1_yj6gm")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=557418758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.001, 0.110058516, -0.001)
+shape = SubResource("SphereShape3D_yj6gm")

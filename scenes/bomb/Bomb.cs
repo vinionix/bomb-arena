@@ -35,14 +35,6 @@ public partial class Bomb : RigidBody3D
 			}
 			return;
 		}
-		//if (CollisionObject3D.)
-		//{
-		//	_timerExplosion -= (float)delta;
-		//}
-		//if (_timerExplosion <= 0)
-		//{
-		//	Explode();
-		//}
 	}
 
 	public override void _Ready()

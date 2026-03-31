@@ -9,7 +9,9 @@ public partial class Player : CharacterBody3D
 	private float _speedGrowth = 0.02f;
 	private float _elapsedTime = 0.0f;
 	private float _rotationSpeed = 8.0f;
+	private int _health = 1;
 	private AnimationPlayer _animationPlayer;
+	private bool _isDead = false;
 
 	private float GetCurrentSpeed()
 	{
@@ -45,7 +47,34 @@ public partial class Player : CharacterBody3D
 		}
 		return direction.Normalized();
 	}
+	
 
+	private void Die()
+	{
+		if (_isDead)
+			return;
+		_isDead = true;
+		SetProcess(false);
+		SetPhysicsProcess(false);
+		_animationPlayer.Play("die");
+	}
+
+	private void OnDeathAnimationFinished(StringName animName)
+	{
+		if (!_isDead)
+			return;
+		if (animName != "die")
+			return;
+		QueueFree();
+	}
+	public void TakeDamage(int damage)
+	{
+		_health -= damage;
+		if (_health <= 0)
+		{
+			Die();
+		}
+	}
 	private void VelocityUpdate(double delta)
 	{
 		_elapsedTime += (float)delta;
@@ -62,7 +91,7 @@ public partial class Player : CharacterBody3D
 		}
 	}
 
-	public void GravityUpdate(double delta)
+	private void GravityUpdate(double delta)
 	{
 		if (!IsOnFloor())
 		{
@@ -79,11 +108,13 @@ public partial class Player : CharacterBody3D
 		VelocityUpdate(delta);
 		RotatePlayer(GetInputDirection(), delta);
 		GravityUpdate(delta);
+		GD.Print("Player health: ", _health);
 		MoveAndSlide();
 	}
 
 	public override void _Ready()
 	{
 		_animationPlayer = GetNode < AnimationPlayer >("AnimationPlayer");
+		_animationPlayer.AnimationFinished += OnDeathAnimationFinished;
 	}
 }
